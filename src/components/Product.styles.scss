@@ -1,43 +1,109 @@
-.product{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    margin:20px;
-    padding:20px;
-    width: 100%;
-    max-height: 500px;
-    max-width: 1500px;
-    background-color: white;
-    z-index: 1;
+.product {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 20px;
+  outline: none;
+  margin: 20px 0px;
+  border-radius: 15px;
+  border: none;
+  width: 480px;
+  box-shadow: 10px 10px 12px 10px rgba(0, 0, 0, 0.3);
+  background-color: white;
+  z-index: 1;
+  transition: all 0.8s;
 
-    &__info{
-        font-size: 16px;
-        height: 100px;
-        margin-bottom:5px;
-    }
-&__price{
-    // padding:10px 0;
-    margin-top:10px;
-    
-}
-&__rating{
+  &:hover {
+    transition: all 0.8s;
+    transform: scale(1.02);
+    box-shadow: 5px 5px 7px 4px rgba(40, 167, 70, 0.3);
+  }
+
+  &__info {
+    font-size: 30px;
+    font-weight: 600;
+    word-wrap: break-word;
+    color: rgba(0, 0, 0, 0.7);
+    margin-bottom: 5%;
+  }
+  &__price {
     display: flex;
-    flex-direction: row;
-}
-&__image{
+    font-size: 22px;
+    color: rgba(0, 0, 0, 0.6);
+  }
+  &__rating {
+    display: flex;
+    font-size: 22px;
+    align-items: center;
+  }
+  &__image {
     max-height: 200px;
     width: 100%;
+    margin: 15px 0px;
     object-fit: contain;
-    margin-bottom: 15px;
-    
-}
-button{
-    width: 40%;
-    margin:0 auto;
+  }
+  button {
+    width: 200px;
+    margin: 10px auto 0px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 20px;
+    letter-spacing: 1px;
+    color: white;
     background-color: #28a746ad;
-    border:1px solid;
-    margin-top: 10px;
-    border-color:  #28a745ad #28a745 #28a745;
-    color:#111
+    padding: 2% 5%;
+    border: 2px solid transparent;
+    outline: none;
+    cursor: pointer;
+
+    &:hover {
+      transition: all 0.5s;
+      border: 2px solid #28a746ad;
+      background-color: white;
+      color: #28a746ad;
+    }
+  }
 }
+
+@media screen and (max-width: 1440px) {
+  .product {
+    width: 360px;
+    &__info {
+      font-size: 20px;
+    }
+    &__price {
+      font-size: 18px;
+    }
+    &__rating {
+      font-size: 18px;
+    }
+    button {
+      font-size: 14px;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .product {
+    box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.3);
+
+    &__image {
+      height: 150px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .product {
+    button {
+      font-size: 14px;
+      font-weight: 500;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .product {
+    width: 360px;
+  }
 }

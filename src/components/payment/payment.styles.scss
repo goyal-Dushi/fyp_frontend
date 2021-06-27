@@ -1,28 +1,60 @@
-.payment{
-    background-color: white;
-&__container>h1{
+.payment {
+  background-color: white;
+  margin-top: 80px;
+  &__container > h1 {
     text-align: center;
-    padding:10px;
+    padding: 10px;
     font-weight: 400;
-    background-color: rgb(234,237,237);
+    background-color: rgb(234, 237, 237);
     border-bottom: 1px solid lightgray;
-}
-&__container>h1 a{
+  }
+  &__container > h1 a {
     text-decoration: none;
-}
-&__section{
+  }
+  &__section {
     display: flex;
-    // justify-content: space-around;
-    padding:10px;
+    padding: 10px;
     margin: 0 20px;
     border-bottom: 1px solid lightgray;
-}
-&__title{
-    flex:0.2;
-}
-&__address,.payment__items,.payment__details{
-    flex:0.8;
-}
-}
+  }
+  //   .CardField,
+  //   .CardField-input-wrapper,
+  //   .CardBrandIcon-container,
+  //   .CardField-number,
+  //   .Icon {
+  //     font-size: 20px;
+  //   }
+  &__priceContainer {
+    margin: 10px 0px;
+    button {
+      padding: 5px 10px;
+      font-size: 15px;
+      border-radius: 5px;
+      border: 1px solid #28a746ad;
+      background-color: transparent;
+      color: #28a746ad;
+      cursor: pointer;
+      font-weight: 600;
+      margin: 10px 0px;
+      &:hover {
+        background-color: #28a746ad;
+        color: #ffffff;
+      }
+    }
+  }
+  &__items {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+  }
 
-
+  &__title {
+    flex: 0.2;
+  }
+  &__address,
+  .payment__items,
+  .payment__details {
+    flex: 0.8;
+  }
+}
